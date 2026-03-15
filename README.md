@@ -16,7 +16,7 @@ I build production automation infrastructure at the intersection of financial op
 
 ### Tech I work with
 
-`Python` · `Flask` · `Dash` · `Socket.IO` · `C#` · `ASP.NET Core` · `Entity Framework Core` · `RESTful APIs` · `SQL` · `Data Pipelines` · `Git` · `HTML/CSS/JS`
+`Python` · `Flask` · `Dash` · `Socket.IO` · `C#` · `ASP.NET Core` · `Entity Framework Core` · `RESTful APIs` · `JavaScript` · `HTML/CSS` · `SQL` · `Docker` · `Control-M` · `Data Pipelines` · `Git`
 
 ---
 
