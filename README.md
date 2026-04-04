@@ -1,28 +1,55 @@
 ## Hi 👋, I'm Sang.
+**Software Engineer · Data Engineering · Financial Systems** at Citibank · Tampa, FL
 
-**Applications Developer & Automation Engineer** at Citibank · Tampa, FL
-
-I build production automation infrastructure at the intersection of financial operations and software engineering. I turn manual, error-prone workflows into reliable, scalable systems.
+I build production automation infrastructure at the intersection of 
+financial operations and software engineering. I turn manual, 
+error-prone workflows into reliable, scalable systems.
 
 ---
 
 ### What I'm building
 
-**ATLAS v4.0** — Full-stack automation platform I designed and built entirely solo at Citi. Replaced 80% of manual Excel-based reporting with 5+ real-time data pipelines, a live dashboard, and Socket.IO for real-time updates, saving ~120+ hours per monthly cycle. Codebase is confidential — architecture and outcomes are mine to share.
+**ATLAS** — A config-driven Python automation platform I designed 
+and built entirely solo at Citi. Processes ~25M records/month across 
+4 controls-testing pipelines — Threshold Validation, Duplicate 
+Detection, Dual Blind Rekey, and GPOC executive reporting — 
+validating roughly $1.5 trillion in payment value every cycle. 
+Reduced ~90% of manual effort per monthly cycle, saving 150+ hours. 
+Codebase is internal to Citi — the architecture and outcomes are 
+mine to discuss.
 
-**ThriveKid** — A Progressive Web App for tracking childhood developmental milestones. Built with C#, ASP.NET Core, Entity Framework Core, and a RESTful API backend. My public-facing engineering proof — the code I can actually show. *(In development)*
+**SENTINEL** — A live financial data monitoring service deployed on 
+AWS. Ingests U.S. economic indicators daily via the FRED API, 
+detects anomalies, and serves alerts through a secured FastAPI layer 
+backed by PostgreSQL. Infrastructure provisioned with Terraform, 
+full GitHub Actions CI/CD, and pytest coverage maintained at 100% 
+pass across 3 months of active development.
+
+**ThriveKid** — A deployed full-stack PWA built from scratch over 8 
+months. 12 feature modules, JWT authentication with refresh token 
+rotation, Clean Architecture across a 3-layer .NET 8 backend, React 
+19 TypeScript frontend on Vercel and Azure. Went through two full 
+mentor code reviews with a senior engineer — 25+ issues identified 
+and resolved, including a 13-issue security audit before public 
+launch.
 
 ---
 
 ### Tech I work with
 
-`Python` · `Flask` · `Dash` · `Socket.IO` · `C#` · `ASP.NET Core` · `Entity Framework Core` · `RESTful APIs` · `JavaScript` · `HTML/CSS` · `SQL` · `Docker` · `Control-M` · `Data Pipelines` · `Git`
+`Python` · `FastAPI` · `Flask` · `Pandas` · `C#` · `ASP.NET Core` · 
+`Entity Framework Core` · `React` · `TypeScript` · `RESTful APIs` · 
+`PostgreSQL` · `SQLite` · `SQL Server` · `Docker` · `Terraform` · 
+`AWS EC2` · `Azure` · `GitHub Actions` · `Socket.IO` · `Git`
 
 ---
 
 ### Background
 
-I came from finance — Wells Fargo, then Raymond James — before teaching myself to code and building the tools I needed when none existed. Currently finishing a B.S. in Computer Science at WGU (est. Dec 2027) while working full-time.
+I came from finance — Wells Fargo, then Raymond James — before 
+teaching myself to code and building the tools I needed when none 
+existed. Currently finishing a B.S. in Computer Science at WGU 
+(est. Dec 2027) while working full-time at Citi.
 
 ---
 
