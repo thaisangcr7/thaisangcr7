@@ -16,10 +16,40 @@ days of work just to catch errors that a machine could find in
 seconds. So I built one. ATLAS is a config-driven Python automation
 platform I designed and built entirely solo at Citi. It processes
 ~25M records/month across 52 global payment applications — running 5 different
-pipeline including Threshold, Duplicate, Dual Blind Rekey, and GP
+pipelines including Threshold, Duplicate, Dual Blind Rekey, and GP
 GPOC and MCA executive reporting — validating roughly $1.5 trillion in
 payment value every cycle. What used to take over 150 hours of manual
 effort per cycle now runs in the background.
+
+**Avocado** — A team knowledge and analysis copilot, and the largest
+thing I've built. Most "chat with your documents" tools retrieve a
+paragraph and paraphrase it. Avocado does that — every answer carries
+the sources it came from — but when the question is analytical it
+writes pandas, runs it in a locked-down container, and returns the
+computed number next to the program that produced it. One path is
+explainable, the other is verifiable, and the interface tells you which
+one you got. The sandbox is the part I'd defend in review: no network,
+read-only filesystem, all Linux capabilities dropped, non-root, hard
+memory and CPU caps, applied unconditionally rather than per request.
+The API never holds the Docker socket — a separate runner does, with no
+database and no model access — so compromising the API doesn't mean
+owning the host. Tenant isolation is a SQL predicate at the repository
+layer, not a filter in application code, because filtering after
+loading means the rows already crossed the boundary. FastAPI +
+PostgreSQL/pgvector + React, 757 tests, MIT.
+
+**credit-rag** — Reads a 200+ page commercial credit agreement and
+returns the key terms as structured data. The hard part isn't getting
+an answer out of a language model; it's knowing whether to trust it.
+Every value comes back with the page and the sentence it came from, and
+each citation is verified in code against the retrieved text, so an
+unsupported answer is downgraded to "not found" rather than invented.
+Two-stage search — pgvector/HNSW narrowed by a local cross-encoder
+re-ranker — with Kafka-queued ingestion and an idempotent worker.
+Accuracy is measured rather than assumed: an evaluation harness scored
+it against hand-labeled answer keys, lifting accuracy on a real SEC
+filing from 57% to 71%, and disproved a change that turned out to make
+no difference at all.
 
 **Automated Portfolio Analytics Pipeline** — I wanted to learn how
 data actually moves at scale. So I built one from
@@ -32,7 +62,7 @@ architecture follows the medallion pattern (Bronze / Silver / Gold)
 and a star schema in the gold layer. It's a portfolio project,
 but it's built the way a real data team would build it.
 
-**ThriveKid** ThriveKid is a
+**ThriveKid** — ThriveKid is a
 full-stack PWA that helps parents like me track and support their child's
 development. It took 8 months, two full mentor code reviews with a
 senior engineer, and a 13-issue security audit before it went live.
@@ -44,7 +74,7 @@ refresh token rotation, and Docker + GitHub Actions CI/CD.
 
 ### Tech I work with
 
-`Python` · `Pandas` · `FastAPI` · `Flask` · `dbt` · `Apache Airflow` · `C#` · `ASP.NET Core` · `Entity Framework Core` · `React` · `TypeScript` · `RESTful APIs` · `PostgreSQL` · `SQLite` · `SQL Server` · `Docker` · `Azure` · `GitHub Actions` · `Git` · `GitHub Copilot` · `Prompt Engineering`
+`Python` · `Pandas` · `FastAPI` · `Flask` · `dbt` · `Apache Airflow` · `C#` · `ASP.NET Core` · `Entity Framework Core` · `React` · `TypeScript` · `RESTful APIs` · `PostgreSQL` · `pgvector` · `SQLite` · `SQL Server` · `Redis` · `Apache Kafka` · `Claude API` · `RAG` · `Docker` · `Azure` · `GitHub Actions` · `Git` · `pytest` · `GitHub Copilot` · `Prompt Engineering`
 
 ---
 
@@ -52,10 +82,10 @@ refresh token rotation, and Docker + GitHub Actions CI/CD.
 
 I came from finance — Wells Fargo, then Raymond James, as an IT
 Business Analyst doing SQL-heavy pipeline work — before teaching
-I had to code and build the tools I needed when none existed.
-Currently a candidate for the M.S. in AI & Business Analytics
-(Systems Integration) at USF's Muma College of Business while
-working full-time at Citi.
+myself to code and building the tools I needed when none existed.
+Currently a candidate for the M.S. in Artificial Intelligence in
+Business & Enterprise Integration at the University of South Florida
+(expected December 2027) while working full-time at Citi.
 
 ---
 
