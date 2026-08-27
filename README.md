@@ -75,7 +75,19 @@ refresh token rotation, and Docker + GitHub Actions CI/CD.
 
 ### Tech I work with
 
-`Python` · `Pandas` · `FastAPI` · `Flask` · `dbt` · `Apache Airflow` · `C#` · `ASP.NET Core` · `Entity Framework Core` · `React` · `TypeScript` · `RESTful APIs` · `PostgreSQL` · `pgvector` · `SQLite` · `SQL Server` · `Redis` · `Apache Kafka` · `Claude API` · `RAG` · `Docker` · `Azure` · `GitHub Actions` · `Git` · `pytest` · `GitHub Copilot` · `Prompt Engineering`
+**Languages** — `Python` · `TypeScript` · `C#` · `SQL` · `JavaScript`
+
+**Backend** — `FastAPI` · `Pydantic` · `SQLAlchemy` · `Alembic` · `Flask` · `ASP.NET Core` · `Entity Framework Core` · `REST` · `WebSockets`
+
+**Frontend** — `React` · `Angular` · `Tailwind CSS` · `Vite`
+
+**Data** — `PostgreSQL` · `pgvector` · `Redis` · `Apache Kafka` · `dbt` · `Apache Airflow` · `Pandas` · `SQL Server` · `SQLite` · `Metabase`
+
+**AI & retrieval** — `Claude API` · `RAG` · `Vector search` · `Cross-encoder re-ranking` · `Sandboxed code execution` · `Deepgram` · `Prompt Engineering`
+
+**Infrastructure** — `Docker` · `Kubernetes` · `Terraform` · `AWS` · `Azure` · `Vercel` · `Nginx` · `GitHub Actions`
+
+**Testing & tooling** — `pytest` · `Vitest` · `Playwright` · `Ruff` · `uv` · `OpenTelemetry` · `Git` · `GitHub Copilot`
 
 ---
 
