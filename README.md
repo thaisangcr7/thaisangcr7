@@ -1,10 +1,11 @@
 ## Hi 👋, I'm Sang.
 
-**Automation Engineer · Data Engineering · Financial Systems** at Citibank · Tampa, FL
+**AI / Backend Engineer** · Automation & Data Engineering at Citibank · Tampa, FL
 
-I build production automation infrastructure at the intersection of
-financial operations and Data engineering practices. I turn manual,
-error-prone workflows into reliable, scalable systems.
+I build retrieval and analysis systems — things that answer from real
+documents and data and can show their work. Day to day that means
+production automation for financial operations at Citi, turning manual,
+error-prone workflows into reliable ones.
 
 ---
 
@@ -15,10 +16,10 @@ reconciling payment records every month across spreadsheets, burning
 days of work just to catch errors that a machine could find in
 seconds. So I built one. ATLAS is a config-driven Python automation
 platform I designed and built entirely solo at Citi. It processes
-~25M records/month across 52 global payment applications — running 5 different
-pipelines including Threshold, Duplicate, Dual Blind Rekey, and GP
-GPOC and MCA executive reporting — validating roughly $1.5 trillion in
-payment value every cycle. What used to take over 150 hours of manual
+~25M records/month across 52 global payment applications — running 4
+pipeline types: Threshold Validation, Duplicate Detection, Dual Blind
+Rekey, and GPOC executive reporting — validating roughly $1.5 trillion
+in payment value every cycle. What used to take over 150 hours of manual
 effort per cycle now runs in the background.
 
 **Avocado** — A team knowledge and analysis copilot, and the largest
