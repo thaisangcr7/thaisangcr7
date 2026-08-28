@@ -131,7 +131,7 @@ Today I am continuing that transition through hands-on projects and graduate stu
 ## Currently
 
 - 🥑 Building **Avocado**
-- 🎓 Pursuing graduate study in **AI & Enterprise Integration**
+- 🎓 Pursuing graduate study in **AI & Digital Transformation**
 - 🧠 Deepening my backend, data engineering, and computer science foundations
 - ⚽ Playing soccer whenever I can
 
