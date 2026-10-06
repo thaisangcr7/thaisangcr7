@@ -1,145 +1,154 @@
-# Hi, I'm Sang 👋
+<div align="center">
 
-I build **data, AI, and backend systems** that turn messy manual work into reliable software.
+# Sang Thai — AI Solution and Data Engineer 👋
 
-At Citi, I built an internal Python platform that processes **~25M records per month**, reduced manual effort by **~90%**, and saves **150+ hours per cycle**.
+### **AI Solution and Data Engineer** · M.S. candidate in AI and Digital Transformation @ USF — I build pipelines that hold up in production, and AI systems on top of them.
 
-Outside work, I build production-style AI and data systems focused on one thing: **useful software that can show how it got the answer.**
+<p>
+  <a href="https://sangthai.dev">
+    <img src="https://img.shields.io/badge/Portfolio-sangthai.dev-2ea043?style=for-the-badge&logo=google-chrome&logoColor=white" alt="Portfolio"/>
+  </a>
+  <a href="https://www.linkedin.com/in/sang-thai/">
+    <img src="https://img.shields.io/badge/LinkedIn-sang--thai-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"/>
+  </a>
+  <a href="mailto:thaisangcr7@gmail.com">
+    <img src="https://img.shields.io/badge/Email-thaisangcr7@gmail.com-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Email"/>
+  </a>
+</p>
 
-[🌐 Portfolio](https://sangthai.dev) · [💼 LinkedIn](https://www.linkedin.com/in/sangthai/)
+<p>
+  <img src="https://img.shields.io/badge/Open_to-Work-blue?style=for-the-badge" alt="Open to work"/>
+  <img src="https://img.shields.io/badge/Data_Engineering-2ea043?style=for-the-badge" alt="Data Engineering"/>
+  <img src="https://img.shields.io/badge/AI_Engineering-7c3aed?style=for-the-badge" alt="AI Engineering"/>
+  <img src="https://img.shields.io/badge/Backend-ff8c00?style=for-the-badge" alt="Backend"/>
+</p>
+
+</div>
 
 ---
 
-## Featured Projects
+### About me
+
+At **Citi** I was the sole developer behind **ATLAS**, a controls-testing platform architected for **~25M records/month** across 52 payment applications, built in partnership with Operational Risk stakeholders. It validated locally end-to-end before a reorg shifted priorities.
+
+I came up through data — Finance degree from USF, then Wells Fargo and Raymond James doing SQL-heavy operations and pipeline work (schema design, Control-M batch scheduling) — and taught myself software engineering properly along the way: Python → data pipelines → backend APIs → cloud infrastructure → applied AI. Now formalizing it with an **M.S. in AI in Business & Enterprise Integration** (expected Dec 2027).
+
+My edge: I don't just move data, I make it *usable* — RAG pipelines, verifiable document extraction, and analytics layers teams actually query.
+
+<div align="center">
+  <img src="https://github-readme-stats.vercel.app/api?username=thaisangcr7&show_icons=true&theme=tokyonight&hide_border=true" alt="GitHub stats"/>
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=thaisangcr7&layout=compact&theme=tokyonight&hide_border=true" alt="Top languages"/>
+</div>
+
+---
+
+## 🚀 Featured Projects
+
+### 🎙️ avenotes.ai — [Live site →](https://avenotes.ai)
+
+**Shipped SaaS: AI meeting notes without the bot.**
+
+Browser-based meeting note-taker — no bot joins the call. Live transcription, structured recaps, cross-meeting memory. Designed, built, and launched.
+
+<p align="center">
+  <img src="images/avenotes-hero.jpg" width="720" alt="Avenotes — your second mind for every meeting"/>
+</p>
+<p align="center">
+  <img src="images/avenotes-memory.jpg" width="352" alt="Avenotes remembers — you just ask"/>
+  <img src="images/avenotes-recap.jpg" width="352" alt="Avenotes recap — walk out knowing exactly what was said"/>
+</p>
+
+---
+
+### 📊 [Automated Portfolio Analytics Pipeline](https://github.com/thaisangcr7/Automated-Portfolio-Analytics-Pipeline)
+
+**End-to-end ELT: Yahoo Finance → PostgreSQL → dbt → Metabase, orchestrated by Airflow.**
+
+Daily stock prices flow through a medallion architecture — Bronze (raw, append-only) → Silver (cleaned, enriched) → Gold (marts) — with data quality tests gating every run.
+
+| | |
+|---|---|
+| ⏰ Orchestration | Airflow DAG, weekdays 6 PM: ingest → seed → dbt run → test |
+| 🥉🥈🥇 Modeling | 5 dbt models across three layers · **26 data quality tests** |
+| 📈 BI | Metabase dashboard: value, P&L, moving averages |
+| 🐳 Infra | Fully containerized in Docker |
+
+<p align="center">
+  <img src="https://sangthai.dev/images/portfolio_analysis.png" width="720" alt="Portfolio Analytics Dashboard"/>
+</p>
+
+---
 
 ### 🥑 [Avocado](https://github.com/thaisangcr7/avocado)
-**Ask your team's documents and data.**
 
-Avocado is a team knowledge and analysis copilot that knows when to **retrieve evidence from documents** and when to **compute an answer from structured data**.
+**Grounded AI over your team's data.**
 
-- Answers document questions with sources
-- Runs spreadsheet analysis in a locked-down code sandbox
-- Handles datasets with **110,000+ rows**
-- Built with Python, FastAPI, PostgreSQL, pgvector, Redis, Docker, React, and TypeScript
-- **757 tests · CI green**
+A copilot that answers from documents with cited sources — or writes Python, runs it against your data in a locked-down sandbox, and shows you the code behind the number. Handles **110,000+ row** datasets.
 
-[View project →](https://github.com/thaisangcr7/avocado)
+`Python` `FastAPI` `PostgreSQL` `pgvector` `Redis` `Docker` `React` `TypeScript` — **757 tests · CI green**
+
+<p align="center">
+  <img src="https://sangthai.dev/images/avocado-cited.jpg" width="720" alt="Avocado answering with cited sources"/>
+</p>
 
 ---
 
 ### 🔎 [credit-rag](https://github.com/thaisangcr7/credit-rag)
-**Financial document extraction you can verify.**
 
-Reads long commercial credit agreements and returns structured terms such as borrower, facility amount, maturity, pricing, covenants, and events of default.
+**Verifiable RAG for financial documents.**
 
-Every returned value is tied back to its source. If the evidence cannot be verified, the system returns **not found** instead of inventing an answer.
-
-- Evaluated on a **229-page** filing
-- **100% of returned values cited or abstained**
-- Two-stage retrieval with pgvector + local cross-encoder reranking
-- Kafka-backed idempotent ingestion
-- **64 tests · CI green**
-
-[View project →](https://github.com/thaisangcr7/credit-rag)
+Extracts structured terms from 200+ page credit agreements — every value traced to its source sentence; unverifiable values return **not found**, never hallucinated. Two-stage retrieval (pgvector + local cross-encoder), Kafka-backed idempotent ingestion, eval harness included (**64 tests · CI green**).
 
 ---
 
 ### 📡 [SENTINEL](https://github.com/thaisangcr7/SENTINEL)
-**A production-style economic data monitoring pipeline.**
 
-SENTINEL pulls U.S. economic indicators from FRED, stores them in PostgreSQL, detects unusual movements, and exposes alerts through a FastAPI service.
+**Production-grade data pipeline on AWS.**
 
-I built it to practice the parts that notebooks skip: deployment, infrastructure, CI/CD, testing, and security.
-
-- Tracks Federal Funds Rate, CPI, and unemployment
-- Infrastructure defined in **Terraform**
-- Deployments blocked when tests fail
-- Security review found and fixed **6 vulnerabilities**
-- Ran live on AWS for five months
-
-[View project →](https://github.com/thaisangcr7/SENTINEL)
+Economic indicator monitoring (FRED API → PostgreSQL → anomaly alerts via FastAPI). Infrastructure fully defined in Terraform, deploys gated on the test suite, security-audited before launch (**6 vulnerabilities fixed**), ran live on AWS for five months.
 
 ---
 
-### 🌐 [Personal Portfolio](https://github.com/thaisangcr7/Sang_Thai_Portfolio)
-The source for [sangthai.dev](https://sangthai.dev), where I document my projects, engineering decisions, and the path from finance into software engineering.
+## 🧰 Tech Stack
 
-[View source →](https://github.com/thaisangcr7/Sang_Thai_Portfolio)
+<p align="center">
+  <img src="https://skillicons.dev/icons?i=python,typescript,sql,fastapi,flask,postgres,redis,kafka,docker,kubernetes,terraform,aws,azure,react,angular,cs,dotnet,git,githubactions,vscode" alt="Tech stack"/>
+</p>
 
----
-
-## What I Build
-
-I am most interested in systems where **data engineering, backend development, and applied AI meet**:
-
-- Retrieval-augmented generation and grounded AI
-- Structured data analysis with LLM orchestration
-- Backend APIs and data services
-- PostgreSQL and vector search
-- Data pipelines and workflow automation
-- Sandboxed code execution
-- Infrastructure as code
-- Testing, CI/CD, and production reliability
+| Area | |
+|---|---|
+| **Data** | Airflow · dbt · Kafka · PostgreSQL · pgvector · SQL Server · Pandas · Metabase |
+| **AI** | RAG · Vector search · Cross-encoder reranking · Eval harnesses · Sandboxed code execution · Claude API · Deepgram |
+| **Backend** | FastAPI · Flask · ASP.NET Core · REST · WebSockets · async Python |
+| **Infra** | Docker · Kubernetes · Terraform · AWS · Azure · GitHub Actions · CI/CD |
 
 ---
 
-## From Finance to Engineering
-
-I studied Finance at the University of South Florida and did not write my first line of code until my final semester.
-
-One computer science class changed the direction I wanted to take.
-
-I started with Python automation, then moved into data pipelines, backend systems, cloud infrastructure, and applied AI.
-
-That path eventually led to **ATLAS**, an internal platform I designed and built at Citi for operational-risk controls testing across more than 50 payment applications.
-
-Today I am continuing that transition through hands-on projects and graduate study in AI and enterprise integration.
-
----
-
-## A Few Numbers
+## 📈 By the numbers
 
 | | |
 |---|---:|
-| Records processed by my Citi automation | **~25M / month** |
-| Manual effort reduced | **~90%** |
-| Analyst time saved | **150+ hrs / cycle** |
+| Records/month ATLAS was architected for | **~25M** |
+| Manual effort it was designed to remove | **~90%** |
+| Payment applications covered | **52** |
+| dbt models / data quality tests | **5 / 26** |
 | Avocado automated tests | **757** |
-| Largest Avocado dataset tested | **110,064 rows** |
-| credit-rag evaluated document | **229 pages** |
+| Largest dataset computed in full | **110,064 rows** |
 
 ---
 
-### Tech I work with
+## 📬 Currently
 
-**Languages** — `Python` · `TypeScript` · `C#` · `SQL` · `JavaScript`
-
-**Backend** — `FastAPI` · `Pydantic` · `SQLAlchemy` · `Alembic` · `Flask` · `ASP.NET Core` · `Entity Framework Core` · `REST` · `WebSockets`
-
-**Frontend** — `React` · `Angular` · `Tailwind CSS` · `Vite`
-
-**Data** — `PostgreSQL` · `pgvector` · `Redis` · `Apache Kafka` · `dbt` · `Apache Airflow` · `Pandas` · `SQL Server` · `SQLite` · `Metabase`
-
-**AI & retrieval** — `Claude API` · `RAG` · `Vector search` · `Cross-encoder re-ranking` · `Sandboxed code execution` · `Deepgram` · `Prompt Engineering`
-
-**Infrastructure** — `Docker` · `Kubernetes` · `Terraform` · `AWS` · `Azure` · `Vercel` · `Nginx` · `GitHub Actions`
-
-**Testing & tooling** — `pytest` · `Vitest` · `Playwright` · `Ruff` · `uv` · `OpenTelemetry` · `Git` · `GitHub Copilot`
-
----
-
-## Currently
-
-- 🥑 Building **Avocado**
-- 🎓 Pursuing graduate study in **AI & Digital Transformation**
-- 🧠 Deepening my backend, data engineering, and computer science foundations
+- 📊 Building data systems that hold up in production
+- 🎙️ Growing **avenotes.ai**
+- 🎓 M.S. in AI & Digital Transformation @ USF
+- 💼 Open to **Data Engineering, AI Engineering, and Frontend/Backend** roles — [let's talk](mailto:thaisangcr7@gmail.com)
 - ⚽ Playing soccer whenever I can
 
 ---
 
+<div align="center">
 
-### Let's connect
+🌐 [sangthai.dev](https://sangthai.dev) · 💼 [LinkedIn](https://www.linkedin.com/in/sang-thai/) · 📧 thaisangcr7@gmail.com
 
----
-
-🌐 [sangthai.dev](https://sangthai.dev) · 💼 [LinkedIn](https://linkedin.com/in/sang-thai) · 📧 thaisangcr7@gmail.com
+</div>
